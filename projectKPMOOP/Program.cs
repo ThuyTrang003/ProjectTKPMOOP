@@ -18,39 +18,35 @@ public class Program
         Console.WriteLine("1. Xem lịch chiếu");
         Console.WriteLine("2. Xem lịch sử đặt vé");
         Console.WriteLine("3. Xem danh sách phim");
+        getChoiceMenu();
     }
 
-    public static int getChoiceMenu()
+    public static void getChoiceMenu()
     {
         Console.Write("Yêu cầu nhập kí tự tương ứng để chọn chức năng:");
         String choiceNumber= Console.ReadLine();
         if (choiceNumber == "1")
         {
-            return 1;
+            DateTime now = DateTime.Now;
+            ShowSchedule showSchedule = new ShowSchedule();
+            Console.Clear();
+            showSchedule.displayScheduleByDate(now);
         }
         else if (choiceNumber == "3")
-        {
-            return 3;
-        }
-        else { return getChoiceMenu();}
-    }
-    static void Main(String[] args)
-    {
-        Console.OutputEncoding = Encoding.UTF8;
-        displayMenu();
-        int choiceMenu = getChoiceMenu();
-        if (choiceMenu == 1)
-        {
-            DateTime now = DateTime.Now;
-            ShowSchedule showSchedule= new ShowSchedule();
-            Console.Clear();
-            showSchedule.displayScheduleByDate(now);          
-        }
-        else if (choiceMenu == 3) 
         {
             Movie movie = new Movie();
             movie.displayListMovie();
             movie.getChoiceExit();
         }
+        else 
+        { 
+            getChoiceMenu();
+        }
+    }
+
+    static void Main(String[] args)
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        displayMenu();
     }
 }
