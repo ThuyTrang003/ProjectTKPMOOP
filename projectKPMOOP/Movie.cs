@@ -113,9 +113,31 @@ public class Movie {
         }
     }
     public void displayMovieDetail() {
-        // TODO implement here
+        Console.Clear();
+        Console.WriteLine("<<Thông tin phim>>");
+        getChoiceMovieDetail();
     }
+    public void getChoiceMovieDetail()
+    {
+        Console.WriteLine("Nhập kí tự tương ứng để chọn:");
+        Console.WriteLine("a. Chỉnh sửa phim");
+        Console.WriteLine("b. Xóa phim");
+        Console.WriteLine("Hoặc chọn suất chiếu tương ứng để đặt vé");
+        String choiceNumber= Console.ReadLine();
+        if (choiceNumber == "a") { }
+        else if (choiceNumber == "b") { }
+        else if (choiceNumber == "1") 
+        {
+            //ví dụ đặt vé cho suất đầu tiên
 
+        }
+        else
+        {
+            Console.Clear();
+            Program.displayMenu();
+        } 
+            
+    }
     public void getChoiceEditMovie() {
         // TODO implement here
     }
@@ -155,8 +177,6 @@ public class Movie {
         // TODO implement here
     }
 
-    public void getChoiceMovieDetail() {
-        // TODO implement here
-    }
+    
 
 }
