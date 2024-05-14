@@ -470,19 +470,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\TGDD\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HKII_NAM3\\thietKePMOOP_Thanh\\projectKPMOOP\\projectKPMOOP\\projectKPMOOP.csproj",
+      "projectUniqueName": "C:\\Users\\TGDD\\Source\\Repos\\ProjectTKPMOOP\\projectKPMOOP\\projectKPMOOP.csproj",
       "projectName": "projectKPMOOP",
-      "projectPath": "D:\\HKII_NAM3\\thietKePMOOP_Thanh\\projectKPMOOP\\projectKPMOOP\\projectKPMOOP.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\HKII_NAM3\\thietKePMOOP_Thanh\\projectKPMOOP\\projectKPMOOP\\obj\\",
+      "projectPath": "C:\\Users\\TGDD\\Source\\Repos\\ProjectTKPMOOP\\projectKPMOOP\\projectKPMOOP.csproj",
+      "packagesPath": "C:\\Users\\TGDD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\TGDD\\Source\\Repos\\ProjectTKPMOOP\\projectKPMOOP\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TGDD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -490,6 +495,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -529,7 +535,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

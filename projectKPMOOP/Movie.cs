@@ -38,14 +38,79 @@ public class Movie {
         Console.WriteLine("\n");
         Console.WriteLine("Nhập số thứ tự tương ứng với từng phim để xem thông tin phim");
         Console.WriteLine("0. Thoát");
+        Console.WriteLine("1. Thêm phim");
         Console.Write("Vui lòng nhập: ");
-        String choiceNumber= Console.ReadLine();
-        if (choiceNumber == "0" ) 
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
         {
             Console.Clear();
             Program.displayMenu();
         }
-        //nhập để xem thông tin phim
+        if (choiceNumber == "1")
+        {
+            addIDMovie();
+        }
+    }
+    public void addIDMovie()
+    {
+        Console.Clear();
+        Console.Write("ID phim: ");
+        string input = Console.ReadLine();
+        addNameMovie();
+    }
+    public void addNameMovie()
+    {
+        Console.Clear();
+        Console.Write("Tên phim: ");
+        string input = Console.ReadLine();
+        addYearMovie();
+    }
+    public void addYearMovie()
+    {
+        Console.Clear();
+        Console.Write("Năm phát hành: ");
+        string input = Console.ReadLine();
+        addGenreMovie();
+    }
+    public void addGenreMovie()
+    {
+        Console.Clear();
+        Console.Write("Thể loại: ");
+        string input = Console.ReadLine();
+        addActorMovie();
+    }
+    public void addActorMovie()
+    {
+        Console.Clear();
+        Console.Write("Diễn Viên: ");
+        string input = Console.ReadLine();
+        addDirectorMovie();
+    }
+    public void addDirectorMovie()
+    {
+        Console.Clear();
+        Console.Write("Đạo diễn: ");
+        string input = Console.ReadLine();
+        addPlotMovie();
+    }
+    public void addPlotMovie()
+    {
+        Console.Clear();
+        Console.Write("Mô tả: ");
+        string input = Console.ReadLine();
+        addSuccess();
+    }
+    public void addSuccess()
+    {
+        Console.Clear();
+        Console.WriteLine("Thêm phim thành công");
+        Console.WriteLine("Ấn phím 0 để trở về danh sách phim");
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
+        {
+            Console.Clear();
+            getChoiceListMovie();
+        }
     }
     public void displayMovieDetail() {
         // TODO implement here
