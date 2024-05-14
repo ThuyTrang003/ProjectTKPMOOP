@@ -58,6 +58,11 @@ public class ShowSchedule {
             DateTime date = getDay();
             displayScheduleByDate((DateTime)date);
         }
+        else if (choiceNumber == "c")
+        {
+            Program.displayMenu();
+        }
+        
 
     }
 

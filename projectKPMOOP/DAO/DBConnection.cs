@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projectKPMOOP
+namespace projectKPMOOP.DAO
 {
     internal class DBConnection
     {
@@ -29,7 +29,7 @@ namespace projectKPMOOP
 
         public void openConnection() //Mở kết nối
         {
-            if ((conn.State == ConnectionState.Closed))
+            if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
             }
@@ -37,7 +37,7 @@ namespace projectKPMOOP
 
         public void closeConnection() //Đóng kết nối
         {
-            if ((conn.State == ConnectionState.Closed))
+            if (conn.State == ConnectionState.Closed)
             {
                 conn.Close();
             }

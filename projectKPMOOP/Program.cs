@@ -36,7 +36,7 @@ public class Program
         {
             Movie movie = new Movie();
             movie.displayListMovie();
-            movie.getChoiceExit();
+            //phần của Quang
         }
         else 
         { 
