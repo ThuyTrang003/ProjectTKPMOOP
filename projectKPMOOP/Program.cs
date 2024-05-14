@@ -36,7 +36,6 @@ public class Program
         {
             Movie movie = new Movie();
             movie.displayListMovie();
-            //phần của Quang
         }
         else 
         { 
