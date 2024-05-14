@@ -62,7 +62,11 @@ public class ShowSchedule {
         {
             Program.displayMenu();
         }
-        
+        else if (choiceNumber == "1") 
+        {
+            //ví dụ đây là xem thông tin phim thứ nhất
+
+        }
 
     }
 
