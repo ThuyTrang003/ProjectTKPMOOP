@@ -11,8 +11,6 @@ public class Program
     {
     }
 
-    public void Attribute1;
-
     public void displayMenu()
     {
         // TODO implement here

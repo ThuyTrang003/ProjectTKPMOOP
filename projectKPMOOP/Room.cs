@@ -9,14 +9,14 @@ public class Room {
     public Room() {
     }
 
-    private string room_ID;
+    private String room_ID;
 
     private int r_capacity;
 
     /// <summary>
     /// @param schedueID
     /// </summary>
-    public void displaySeatChart(void schedueID) {
+    public void displaySeatChart(String scheduleID) {
         // TODO implement here
     }
 
@@ -24,7 +24,7 @@ public class Room {
     /// @param seatQuantity 
     /// @param scheduleID
     /// </summary>
-    public void getSeats(void seatQuantity, void scheduleID) {
+    public void getSeats(int seatQuantity, String scheduleID) {
         // TODO implement here
     }
 

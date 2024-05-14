@@ -11,21 +11,21 @@ public class showSchedule {
 
     private string ss_ID;
 
-    private date ss_StartTime;
+    private DateTime ss_StartTime;
 
-    private date ss_endTime;
+    private DateTime ss_endTime;
 
     /// <summary>
     /// @param date
     /// </summary>
-    public void displayScheduleByDate(void date) {
+    public void displayScheduleByDate(DateTime date) {
         // TODO implement here
     }
 
     /// <summary>
     /// @param movie
     /// </summary>
-    public void displayScheduleByMovie(void movie) {
+    public void displayScheduleByMovie(String movie) {
         // TODO implement here
     }
 

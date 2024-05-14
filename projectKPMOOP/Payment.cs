@@ -9,7 +9,7 @@ public class Payment {
     public Payment() {
     }
 
-    private string p_ID;
+    private String p_ID;
 
     private int p_totalPay;
 
@@ -20,7 +20,7 @@ public class Payment {
     /// <summary>
     /// @param scheduleID
     /// </summary>
-    public void getTicketQuantity(void scheduleID) {
+    public void getTicketQuantity(String scheduleID) {
         // TODO implement here
     }
 
@@ -35,7 +35,7 @@ public class Payment {
     /// <summary>
     /// @param paymentID
     /// </summary>
-    public void displayBookingInfor(void paymentID) {
+    public void displayBookingInfor(String paymentID) {
         // TODO implement here
     }
 

@@ -9,23 +9,23 @@ public class Movie {
     public Movie() {
     }
 
-    private string movie_ID;
+    private String movie_ID;
 
-    private string title;
+    private String title;
 
-    private string genre;
+    private String genre;
 
     private int lenght;
 
-    private string country;
+    private String country;
 
-    private string director;
+    private String director;
 
-    private date releaseTime;
+    private DateTime releaseTime;
 
-    private string actor;
+    private String actor;
 
-    private string plot;
+    private String plot;
 
     public void displayListMovie() {
         // TODO implement here
@@ -48,10 +48,6 @@ public class Movie {
     }
 
     public void getChoiceExit() {
-        // TODO implement here
-    }
-
-    public void displayMovieDetail() {
         // TODO implement here
     }
 

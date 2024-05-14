@@ -9,8 +9,8 @@ public class Ticket {
     public Ticket() {
     }
 
-    private string seat_ID;
+    private String seat_ID;
 
-    private string Payment_ID;
+    private String Payment_ID;
 
 }
