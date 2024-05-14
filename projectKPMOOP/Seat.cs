@@ -9,6 +9,6 @@ public class Seat {
     public Seat() {
     }
 
-    private string seat_ID;
+    private String seat_ID;
 
 }
