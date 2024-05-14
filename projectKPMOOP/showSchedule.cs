@@ -1,12 +1,13 @@
-
+﻿
+using projectKPMOOP.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class showSchedule {
-
-    public showSchedule() {
+public class ShowSchedule {
+    ShowScheduleDAO showScheduleDAO = new ShowScheduleDAO();
+    public ShowSchedule() {
     }
 
     private string ss_ID;
@@ -19,18 +20,26 @@ public class showSchedule {
     /// @param date
     /// </summary>
     public void displayScheduleByDate(DateTime date) {
-        // TODO implement here
+        showScheduleDAO.getMovie(date);
     }
 
     /// <summary>
     /// @param movie
     /// </summary>
     public void displayScheduleByMovie(String movie) {
-        // TODO implement here
+        showScheduleDAO.getSchedule(movie);
     }
 
-    public void getChoiceSchedule() {
-        // TODO implement here
+    public String getChoiceSchedule() {
+        String choiceNumber="";
+        Console.WriteLine("Nhập kí tự a,b,c tương ứng với các tùy chọn:");
+        Console.WriteLine("a. Xem lịch chiếu theo tên phim");
+        Console.WriteLine("b. Xem lịch chiếu theo ngày");
+        Console.WriteLine("c. Thoát");
+        Console.WriteLine("Hoặc nhập số thứ tự (1,2,3...) tương ứng với phim bạn muốn xem chi tiết và đặt vé");
+        Console.WriteLine("Vui lòng nhập: ");
+        choiceNumber = Console.ReadLine();
+        return choiceNumber;
     }
 
     public void getDay() {

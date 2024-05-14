@@ -1,0 +1,15 @@
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\bin\Debug\net6.0\projectKPMOOP.exe
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\bin\Debug\net6.0\projectKPMOOP.deps.json
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\bin\Debug\net6.0\projectKPMOOP.runtimeconfig.json
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\bin\Debug\net6.0\projectKPMOOP.dll
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\bin\Debug\net6.0\projectKPMOOP.pdb
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.csproj.AssemblyReference.cache
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.GeneratedMSBuildEditorConfig.editorconfig
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.AssemblyInfoInputs.cache
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.AssemblyInfo.cs
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.csproj.CoreCompileInputs.cache
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.dll
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\refint\projectKPMOOP.dll
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.pdb
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\projectKPMOOP.genruntimeconfig.cache
+D:\HKII_NAM3\thietKePMOOP_Thanh\projectKPMOOP\projectKPMOOP\obj\Debug\net6.0\ref\projectKPMOOP.dll
