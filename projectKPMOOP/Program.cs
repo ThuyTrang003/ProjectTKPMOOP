@@ -43,13 +43,8 @@ public class Program
         {
             DateTime now = DateTime.Now;
             ShowSchedule showSchedule= new ShowSchedule();
-            showSchedule.displayScheduleByDate(now);
-            String choiceNumberSchedule= showSchedule.getChoiceSchedule();
-            if (choiceNumberSchedule == "a") //xem lịch chiếu theo tên phim
-            {
-                Console.WriteLine("Nhập tên phim:");
-                String movieName= Console.ReadLine();
-            }
+            Console.Clear();
+            showSchedule.displayScheduleByDate(now);          
         }
         else if (choiceMenu == 3) 
         {
