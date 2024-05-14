@@ -60,12 +60,19 @@ public class ShowSchedule {
         }
         else if (choiceNumber == "c")
         {
+            Console.Clear() ;
             Program.displayMenu();
         }
         else if (choiceNumber == "1") 
         {
             //ví dụ đây là xem thông tin phim thứ nhất
-
+        }
+        else
+        {
+            Console.WriteLine("-----");
+            Console.WriteLine("Vui lòng nhập lại");
+            Console.WriteLine("-----");
+            getChoiceSchedule();
         }
 
     }

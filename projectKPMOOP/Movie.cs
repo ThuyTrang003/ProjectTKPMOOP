@@ -42,6 +42,7 @@ public class Movie {
         String choiceNumber= Console.ReadLine();
         if (choiceNumber == "0" ) 
         {
+            Console.Clear();
             Program.displayMenu();
         }
         //nhập để xem thông tin phim
@@ -58,11 +59,36 @@ public class Movie {
         // TODO implement here
     }
 
-    public void confirmSave() {
+    public void enterLength()
+    {
         // TODO implement here
     }
 
-    
+    public void enterCountry()
+    {
+        // TODO implement here
+    }
+
+    public void enterDirector()
+    {
+        // TODO implement here
+    }
+
+    public void enterReleaseTime()
+    {
+        // TODO implement here
+    }
+    public void enterActor()
+    {
+        // TODO implement here
+    }
+    public void enterPlot()
+    {
+        // TODO implement here
+    }
+    public void confirmSave() {
+        // TODO implement here
+    }
 
     public void getChoiceMovieDetail() {
         // TODO implement here
