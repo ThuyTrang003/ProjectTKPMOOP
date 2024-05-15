@@ -1,11 +1,12 @@
 
+using projectKPMOOP.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 public class Room {
-
+    RoomDAO roomDAO=new RoomDAO();
     public Room() {
     }
 
@@ -18,6 +19,8 @@ public class Room {
     /// </summary>
     public void displaySeatChart(String scheduleID) {
         // TODO implement here
+        
+        roomDAO.getSeatChart(scheduleID);
     }
 
     /// <summary>

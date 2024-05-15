@@ -112,10 +112,42 @@ public class Movie {
             getChoiceListMovie();
         }
     }
-    public void displayMovieDetail() {
+    public void displayMovieDetail(String movie_ID) {
         Console.Clear();
-        Console.WriteLine("<<Thông tin phim>>");
-        getChoiceMovieDetail();
+        //thực hiện dưới MovieDAO
+        Console.WriteLine("in ra thông tin chi tiết của phim");
+        Console.WriteLine("Nhập số thứ tự tương ứng để chọn phần cần chỉnh sửa");
+        Console.WriteLine("0. Thoát");
+        Console.Write("Vui lòng nhập: ");
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
+        {
+            Program.displayMenu();
+        }
+        if (choiceNumber == "1")
+        {
+            enterTitle();
+        }
+        if (choiceNumber == "2")
+        {
+            enterGenre();
+        }
+        if (choiceNumber == "3")
+        {
+            enterLength();
+        }
+        if (choiceNumber == "4")
+        {
+            enterCountry();
+        }
+        if (choiceNumber == "5")
+        {
+            enterPlot();
+        }
+        if (choiceNumber == "6")
+        {
+            enterReleaseTime();
+        }
     }
     public void getChoiceMovieDetail()
     {
@@ -125,11 +157,31 @@ public class Movie {
         Console.WriteLine("Hoặc chọn suất chiếu tương ứng để đặt vé");
         String choiceNumber= Console.ReadLine();
         if (choiceNumber == "a") { }
-        else if (choiceNumber == "b") { }
-        else if (choiceNumber == "1") 
+        else if (choiceNumber == "b") 
         {
-            //ví dụ đặt vé cho suất đầu tiên
-
+            getDeleteMovie();
+        }   
+        else if (choiceNumber == "1") //ví dụ đặt vé cho suất đầu tiên
+        {
+            String scheduleID= ""; //schedule của suất chiếu được chọn           
+            Room room = new Room();
+            Payment payment = new Payment();
+            payment.getTicketQuantity(scheduleID);
+            room.displaySeatChart(scheduleID);
+            room.getSeats(payment.getP_seatquantity(), scheduleID);
+            payment.getDrinkQuantity();
+            bool isConfirm=payment.confirmBooking();
+            if (isConfirm)
+            {
+                Console.Clear();
+                Console.WriteLine("Đặt vé thành công;");
+                payment.displayBookingInfor(payment.getP_ID());
+                payment.getChoiceExit();
+            }
+            else
+            {
+                displayMovieDetail();
+            }
         }
         else
         {
@@ -138,11 +190,39 @@ public class Movie {
         } 
             
     }
+    public void getDeleteMovie()
+    {
+        Console.WriteLine("Bạn có chắc chắn muốn xóa phim");
+        Console.WriteLine("0. Thoát");
+        Console.WriteLine("1. Xác nhận xóa phim");
+        Console.Write("Vui lòng nhập: ");
+        String choice = Console.ReadLine();
+        if (choice == "0")
+        {
+            getChoiceMovieDetail();
+        }
+        if (choice == "1")
+        {
+            Console.Clear();
+            Console.WriteLine("Xóa phim thành công");
+            Console.Write("Ấn phím 0 để trở về danh sách phim: ");
+            String c = Console.ReadLine();
+            if (c == "0")
+            {
+                Console.Clear();
+                getChoiceListMovie();
+            }
+        }
+    }
     public void getChoiceEditMovie() {
-        // TODO implement here
+        displayMovieDetail(movie_ID);
     }
 
     public void enterGenre() {
+        // TODO implement here
+    }
+    public void enterTitle()
+    {
         // TODO implement here
     }
 
