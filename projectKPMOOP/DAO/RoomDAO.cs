@@ -13,5 +13,10 @@ namespace projectKPMOOP.DAO
         {
 
         }
+        public bool checkSeat(string seatID, String ScheduleID) 
+        {
+            //kiểm tra 
+            return true;
+        }
     }
 }

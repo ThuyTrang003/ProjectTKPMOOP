@@ -1,4 +1,5 @@
-
+﻿
+using projectKPMOOP.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,11 @@ using System.Text;
 
 public class Payment {
 
+    PaymentDAO paymentDAO = new PaymentDAO();
     public Payment() {
+        //lấy p_ID từ DAO
+        string p_ID = "";
+        this.p_ID = p_ID;
     }
 
     private String p_ID;
@@ -25,37 +30,47 @@ public class Payment {
     {
         return this.p_seatQuantity;
     }
+
     public String getP_ID()
     {
         return (this.p_ID);
     }
     public void getTicketQuantity(String scheduleID) {
         // TODO implement here
-        Console.WriteLine("Nh?p s? l??ng v�:");
+        Console.WriteLine("Nhập số lượng vé:");
         String seats= Console.ReadLine();
-        //ki?m tra s? l??ng v� c� �t h?n s? gh� tr?ng kh�ng
         int seatQuantity;
         bool isValid = int.TryParse(seats, out seatQuantity);
 
         if (isValid)
         {
-            if (seatQuantity >= 0)
+            if (seatQuantity > 0)
             {
-                p_seatQuantity = seatQuantity;
+                if (paymentDAO.checkSeatAvailable(scheduleID,seatQuantity))
+                {
+                    p_seatQuantity = seatQuantity;
+
+                }
+                else
+                {
+                    Console.WriteLine("Số lượng vé còn lại không đủ");
+                    getTicketQuantity(scheduleID);
+
+                }
             }
         }
         else
         {
+            Console.WriteLine("Kí tự không hợp lệ");
             getTicketQuantity(scheduleID);
         }
     }
 
     public void getDrinkQuantity() {
-        Console.WriteLine("Nh?p s? l??ng n??c u?ng(n?u ):");
+        Console.WriteLine("Nhập số lượng nước uống:");
         String drinks = Console.ReadLine();
         int drinkQuantity;
         bool isValid = int.TryParse(drinks, out drinkQuantity);
-
         if (isValid)
         {
             if (drinkQuantity >= 0)
@@ -71,7 +86,7 @@ public class Payment {
 
     public bool confirmBooking() {
         // TODO implement here
-        Console.WriteLine("Ch?n 1 ?? x�c nh?n ??t v�, 2 ?? h?y");
+        Console.WriteLine("Chọn 1 để xác nhận đặt vé, 2 để hủy");
         String isConfirm=Console.ReadLine();
         if (isConfirm == "1")
             return true;
@@ -85,18 +100,18 @@ public class Payment {
     /// @param paymentID
     /// </summary>
     public void displayBookingInfor(String paymentID) {
-        // TODO implement here
+        paymentDAO.displayBookingInfor(paymentID);
     }
 
-    public void getChoiceExit() {
+    public void getChoiceExit(String movie_ID) {
         // TODO implement here
-        Console.WriteLine("Nh?p 0 ?? ?? k?t th�c ??t v�");
+        Console.WriteLine("Nhập 0 để kết thúc đặt vé");
         String choiceNumber=Console.ReadLine();
         if (choiceNumber == "0")
         {
             Movie movie = new Movie();
-            movie.displayMovieDetail();
+            movie.displayMovieDetail(movie_ID);
         }
-        else getChoiceExit();         
+        else getChoiceExit(movie_ID);         
     }
 }

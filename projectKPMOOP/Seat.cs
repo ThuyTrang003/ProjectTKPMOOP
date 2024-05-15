@@ -6,9 +6,12 @@ using System.Text;
 
 public class Seat {
 
-    public Seat() {
-    }
-
     private String seat_ID;
-
+    public Seat()
+    {
+    }
+    public Seat(String seat_ID)
+    {
+        this.seat_ID = seat_ID;
+    }
 }
