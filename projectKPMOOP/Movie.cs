@@ -129,7 +129,7 @@ public class Movie {
         Console.WriteLine("Hoặc chọn suất chiếu tương ứng để đặt vé");
         String choiceNumber= Console.ReadLine();
         if (choiceNumber == "a") {
-             getChoiceEditMovie(); //quang
+             getChoiceEditMovie(movie); //quang
         }
         else if (choiceNumber == "b") 
         {
@@ -261,7 +261,7 @@ public class Movie {
     public void enterReleaseTime()
     {
         Console.Clear();
-        Console.Write("Phát hành: ");
+        Console.Write("Lịch chiếu: ");
         string input = Console.ReadLine();
         getChoiceMovieDetail();
     }
@@ -270,6 +270,14 @@ public class Movie {
     {
         Console.Clear();
         Console.Write("mô tả: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
+    }
+
+       public void enterTitle()
+    {
+        Console.Clear();
+        Console.Write("Tiêu đề: ");
         string input = Console.ReadLine();
         getChoiceMovieDetail();
     }
