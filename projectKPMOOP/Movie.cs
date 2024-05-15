@@ -112,44 +112,12 @@ public class Movie {
             getChoiceListMovie();
         }
     }
-    public void displayMovieDetail(String movie_ID) {
+    public void displayMovieDetail(String movie) {
         Console.Clear();
-        //thực hiện dưới MovieDAO
-        Console.WriteLine("in ra thông tin chi tiết của phim");
-        Console.WriteLine("Nhập số thứ tự tương ứng để chọn phần cần chỉnh sửa");
-        Console.WriteLine("0. Thoát");
-        Console.Write("Vui lòng nhập: ");
-        String choiceNumber = Console.ReadLine();
-        if (choiceNumber == "0")
-        {
-            Program.displayMenu();
-        }
-        if (choiceNumber == "1")
-        {
-            enterTitle();
-        }
-        if (choiceNumber == "2")
-        {
-            enterGenre();
-        }
-        if (choiceNumber == "3")
-        {
-            enterLength();
-        }
-        if (choiceNumber == "4")
-        {
-            enterCountry();
-        }
-        if (choiceNumber == "5")
-        {
-            enterPlot();
-        }
-        if (choiceNumber == "6")
-        {
-            enterReleaseTime();
-        }
+        Console.WriteLine("<<Thông tin phim>>");
+        getChoiceMovieDetail(movie);
     }
-    public void getChoiceMovieDetail()
+    public void getChoiceMovieDetail(String movie)
     {
         Console.WriteLine("Nhập kí tự tương ứng để chọn:");
         Console.WriteLine("a. Chỉnh sửa phim");
@@ -159,7 +127,7 @@ public class Movie {
         if (choiceNumber == "a") { }
         else if (choiceNumber == "b") 
         {
-            getDeleteMovie();
+            getDeleteMovie(movie);
         }   
         else if (choiceNumber == "1") //ví dụ đặt vé cho suất đầu tiên
         {
@@ -180,7 +148,7 @@ public class Movie {
             }
             else
             {
-                displayMovieDetail();
+                displayMovieDetail(movie);
             }
         }
         else
@@ -190,7 +158,7 @@ public class Movie {
         } 
             
     }
-    public void getDeleteMovie()
+    public void getDeleteMovie(String movie)
     {
         Console.WriteLine("Bạn có chắc chắn muốn xóa phim");
         Console.WriteLine("0. Thoát");
@@ -199,7 +167,7 @@ public class Movie {
         String choice = Console.ReadLine();
         if (choice == "0")
         {
-            getChoiceMovieDetail();
+            getChoiceMovieDetail(movie);
         }
         if (choice == "1")
         {
@@ -214,15 +182,11 @@ public class Movie {
             }
         }
     }
-    public void getChoiceEditMovie() {
-        displayMovieDetail(movie_ID);
+    public void getChoiceEditMovie(String movie) {
+        displayMovieDetail(movie);
     }
 
     public void enterGenre() {
-        // TODO implement here
-    }
-    public void enterTitle()
-    {
         // TODO implement here
     }
 
