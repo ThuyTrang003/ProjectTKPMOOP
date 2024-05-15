@@ -235,58 +235,6 @@ public class Movie {
         }
     }
 
-    public void getChoiceEditMovie() {
-        Console.Clear();
-        Console.WriteLine("Bạn muốn sửa thông tin phim: ");
-        Console.WriteLine("0. Thoát");
-        Console.WriteLine("1. Thể loại");
-        Console.WriteLine("2. Thời lượng");
-        Console.WriteLine("3. Quốc gia");
-        Console.WriteLine("4. Đạo diễn");
-        Console.WriteLine("5. Phát hành");
-        Console.WriteLine("6. Diễn viên");
-        Console.WriteLine("7. Mô tả");
-        Console.WriteLine("8. Lưu chỉnh sửa");
-        Console.WriteLine("Nhập số thứ tự tương ứng");
-        String choiceNumber = Console.ReadLine();
-        if (choiceNumber == "0")
-        {
-            getChoiceMovieDetail();
-        }
-        else if (choiceNumber == "1")
-        {
-            enterGenre();
-        }
-        else if (choiceNumber == "2")
-        {
-            enterLength();
-        }
-        else if (choiceNumber == "3")
-        {
-            enterCountry();
-        }
-        else if (choiceNumber == "4")
-        {
-            enterDirector();
-        }
-        else if (choiceNumber == "5")
-        {
-            enterReleaseTime();
-        }
-        else if (choiceNumber == "6")
-        {
-            enterActor();
-        }
-        else if (choiceNumber == "7")
-        {
-            enterPlot();
-        }
-        else if (choiceNumber == "8")
-        {
-            confirmSave();
-        }
-    }
-
     public void enterGenre() {
         Console.Clear();
         Console.Write("Thể loại: ");
