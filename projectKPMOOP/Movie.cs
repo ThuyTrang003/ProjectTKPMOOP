@@ -52,7 +52,9 @@ public class Movie {
         }
         if (choiceNumber == "6") //ví dụ chọn 6 để xem thông tin phim "Mắt Biết" 
         {
-            displayMovieDetail(movie);
+            String movie_ID = "";
+            //lấy movie_ID dựa vào phim được chọn dưới DAO
+            displayMovieDetail(movie_ID);
         }
     }
     public void addIDMovie()
@@ -203,7 +205,7 @@ public class Movie {
         String choiceNumber = Console.ReadLine();
         if (choiceNumber == "0")
         {
-            getChoiceMovieDetail();
+            getChoiceMovieDetail(movie);
         }
         else if (choiceNumber == "1")
         {
@@ -239,7 +241,7 @@ public class Movie {
         Console.Clear();
         Console.Write("Thể loại: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
 
     public void enterLength()
@@ -247,7 +249,7 @@ public class Movie {
         Console.Clear();
         Console.Write("Thời lượng: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
 
     public void enterCountry()
@@ -255,7 +257,7 @@ public class Movie {
         Console.Clear();
         Console.Write("Quốc gia: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
 
     public void enterReleaseTime()
@@ -263,7 +265,7 @@ public class Movie {
         Console.Clear();
         Console.Write("Lịch chiếu: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
     
     public void enterPlot()
@@ -271,7 +273,7 @@ public class Movie {
         Console.Clear();
         Console.Write("mô tả: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
 
        public void enterTitle()
@@ -279,7 +281,7 @@ public class Movie {
         Console.Clear();
         Console.Write("Tiêu đề: ");
         string input = Console.ReadLine();
-        getChoiceMovieDetail();
+        getChoiceMovieDetail(movie_ID);
     }
     public void confirmSave() {
         Console.Clear();
@@ -289,7 +291,7 @@ public class Movie {
         if (choiceNumber == "0")
         {
             Console.Clear();
-            getChoiceMovieDetail();
+            getChoiceMovieDetail(movie_ID);
         }
     }
 }
