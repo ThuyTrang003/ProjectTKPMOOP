@@ -50,6 +50,10 @@ public class Movie {
         {
             addIDMovie();
         }
+        if (choiceNumber == "6") //ví dụ chọn 6 để xem thông tin phim "Mắt Biết" 
+        {
+            displayMovieDetail(movie);
+        }
     }
     public void addIDMovie()
     {
@@ -124,7 +128,9 @@ public class Movie {
         Console.WriteLine("b. Xóa phim");
         Console.WriteLine("Hoặc chọn suất chiếu tương ứng để đặt vé");
         String choiceNumber= Console.ReadLine();
-        if (choiceNumber == "a") { }
+        if (choiceNumber == "a") {
+             getChoiceEditMovie(); //quang
+        }
         else if (choiceNumber == "b") 
         {
             getDeleteMovie(movie);
@@ -183,44 +189,151 @@ public class Movie {
         }
     }
     public void getChoiceEditMovie(String movie) {
-        displayMovieDetail(movie);
+        Console.Clear();
+        Console.WriteLine("Bạn muốn sửa thông tin phim: ");
+        Console.WriteLine("0. Thoát");
+        Console.WriteLine("1. Thể loại");
+        Console.WriteLine("2. Thời lượng");
+        Console.WriteLine("3. Quốc gia");
+        Console.WriteLine("4. Mô tả");
+        Console.WriteLine("5. Lịch chiếu");
+        Console.WriteLine("6. Tiêu đề");
+        Console.WriteLine("7. Lưu chỉnh sửa");
+        Console.WriteLine("Nhập số thứ tự tương ứng");
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
+        {
+            getChoiceMovieDetail();
+        }
+        else if (choiceNumber == "1")
+        {
+            enterGenre();
+        }
+        else if (choiceNumber == "2")
+        {
+            enterLength();
+        }
+        else if (choiceNumber == "3")
+        {
+            enterCountry();
+        }
+        else if (choiceNumber == "4")
+        {
+            enterPlot();
+        }
+        else if (choiceNumber == "5")
+        {
+            enterReleaseTime();
+        }
+        else if (choiceNumber == "6")
+        {
+            enterTitle();
+        }
+        else if (choiceNumber == "7")
+        {
+            confirmSave();
+        }
+    }
+
+    public void getChoiceEditMovie() {
+        Console.Clear();
+        Console.WriteLine("Bạn muốn sửa thông tin phim: ");
+        Console.WriteLine("0. Thoát");
+        Console.WriteLine("1. Thể loại");
+        Console.WriteLine("2. Thời lượng");
+        Console.WriteLine("3. Quốc gia");
+        Console.WriteLine("4. Đạo diễn");
+        Console.WriteLine("5. Phát hành");
+        Console.WriteLine("6. Diễn viên");
+        Console.WriteLine("7. Mô tả");
+        Console.WriteLine("8. Lưu chỉnh sửa");
+        Console.WriteLine("Nhập số thứ tự tương ứng");
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
+        {
+            getChoiceMovieDetail();
+        }
+        else if (choiceNumber == "1")
+        {
+            enterGenre();
+        }
+        else if (choiceNumber == "2")
+        {
+            enterLength();
+        }
+        else if (choiceNumber == "3")
+        {
+            enterCountry();
+        }
+        else if (choiceNumber == "4")
+        {
+            enterDirector();
+        }
+        else if (choiceNumber == "5")
+        {
+            enterReleaseTime();
+        }
+        else if (choiceNumber == "6")
+        {
+            enterActor();
+        }
+        else if (choiceNumber == "7")
+        {
+            enterPlot();
+        }
+        else if (choiceNumber == "8")
+        {
+            confirmSave();
+        }
     }
 
     public void enterGenre() {
-        // TODO implement here
+        Console.Clear();
+        Console.Write("Thể loại: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
     }
 
     public void enterLength()
     {
-        // TODO implement here
+        Console.Clear();
+        Console.Write("Thời lượng: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
     }
 
     public void enterCountry()
     {
-        // TODO implement here
-    }
-
-    public void enterDirector()
-    {
-        // TODO implement here
+        Console.Clear();
+        Console.Write("Quốc gia: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
     }
 
     public void enterReleaseTime()
     {
-        // TODO implement here
+        Console.Clear();
+        Console.Write("Phát hành: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
     }
-    public void enterActor()
-    {
-        // TODO implement here
-    }
+    
     public void enterPlot()
     {
-        // TODO implement here
+        Console.Clear();
+        Console.Write("mô tả: ");
+        string input = Console.ReadLine();
+        getChoiceMovieDetail();
     }
     public void confirmSave() {
-        // TODO implement here
+        Console.Clear();
+        Console.WriteLine("Chỉnh sửa phim thành công");
+        Console.Write("Ấn phím 0 để trở về thông tin phim: ");
+        String choiceNumber = Console.ReadLine();
+        if (choiceNumber == "0")
+        {
+            Console.Clear();
+            getChoiceMovieDetail();
+        }
     }
-
-    
-
 }
