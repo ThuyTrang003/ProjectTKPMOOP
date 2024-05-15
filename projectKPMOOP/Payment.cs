@@ -95,14 +95,12 @@ public class Payment {
         else 
             return confirmBooking();
     }
-
     /// <summary>
     /// @param paymentID
     /// </summary>
     public void displayBookingInfor(String paymentID) {
         paymentDAO.displayBookingInfor(paymentID);
     }
-
     public void getChoiceExit(String movie_ID) {
         // TODO implement here
         Console.WriteLine("Nhập 0 để kết thúc đặt vé");

@@ -142,7 +142,6 @@ public class Movie {
         string input = Console.ReadLine();
         getChoiceMovieDetail(movie_ID);
     }
-
     public void enterLength()
     {
         Console.Clear();
@@ -150,7 +149,6 @@ public class Movie {
         string input = Console.ReadLine();
         getChoiceMovieDetail(movie_ID);
     }
-
     public void enterCountry()
     {
         Console.Clear();
@@ -158,7 +156,6 @@ public class Movie {
         string input = Console.ReadLine();
         getChoiceMovieDetail(movie_ID);
     }
-
     public void enterReleaseTime()
     {
         Console.Clear();
@@ -166,7 +163,6 @@ public class Movie {
         string input = Console.ReadLine();
         getChoiceMovieDetail(movie_ID);
     }
-
     public void enterPlot()
     {
         Console.Clear();
@@ -174,7 +170,6 @@ public class Movie {
         string input = Console.ReadLine();
         getChoiceMovieDetail(movie_ID);
     }
-
     public void enterTitle()
     {
         Console.Clear();
@@ -218,7 +213,6 @@ public class Movie {
             }
         }
     }
-
     public void displayListMovie() {
         //lấy dưới DAO
         getChoiceListMovie();
@@ -310,9 +304,4 @@ public class Movie {
             getChoiceListMovie();
         }
     }
-    
-    
-    
-
-   
 }
