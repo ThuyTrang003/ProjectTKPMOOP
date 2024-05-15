@@ -66,6 +66,12 @@ public class ShowSchedule {
         else if (choiceNumber == "1") 
         {
             //ví dụ đây là xem thông tin phim thứ nhất
+            Console.Clear();
+            //movie_ID của phim thứ nhất
+            String movie_ID = "";
+            Movie movie = new Movie(movie_ID);
+            movie.displayMovieDetail(movie_ID);
+
         }
         else
         {
@@ -97,7 +103,8 @@ public class ShowSchedule {
         }
     }
 
-    public String getMovieName() {
+    public String getMovieName() 
+    {
         Console.Clear();
         Console.Write("Nhập tên phim:");
         String movieName = Console.ReadLine();
